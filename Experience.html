@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Profile - Experience</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f7ff;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      color: #4a6cf7;
+    }
+
+    .experience-section {
+      max-width: 700px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.566);
+      padding: 30px 35px 70px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(74, 108, 247, 0.2);
+      /* เพิ่ม animation ตอนโหลดเข้าหน้า */
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    /* กล่องแต่ละ item ขยับเล็กน้อยเมื่อ hover + เงานุ่มๆ */
+    .experience-item {
+      border-left: 4px solid #4a6cf7;
+      padding-left: 20px;
+      margin-bottom: 60px;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 5px;
+      text-align: center;
+      cursor: default;
+    }
+
+    .experience-item:hover {
+      background-color: #e5ebff;
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(74, 108, 247, 0.3);
+    }
+
+    .experience-item h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .experience-item p {
+      margin: 0 0 10px;
+      line-height: 1.6;
+    }
+
+    /* ภาพมี animation ลอยเบาๆ */
+    .experience-item img {
+      max-width: 50%;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      animation: floatImage 4s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+
+    /* ภาพจะขยายเล็กน้อยเวลาหยุด hover */
+    .experience-item img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(74, 108, 247, 0.4);
+    }
+
+    .caption {
+      text-align: center;
+      font-style: italic;
+      color: #4a4f78;
+      margin-top: 8px;
+      user-select: none;
+    }
+
+    /* ✅ Navigation Styling */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #4a6cf7;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 8px;
+      background-color: #eaf0ff;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .nav-links a:hover {
+      background-color: #4a6cf7;
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
+    }
+
+    /* Keyframes for floating image */
+    @keyframes floatImage {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    /* Keyframes fadeInUp */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="experience-section">
+    <h1>🏆 Experience</h1>
+
+    <div class="experience-item">
+      <h3>🤖 High School Robotics Competitions</h3>
+      <p>
+        Participated in various robotics competitions during high school. Gained practical skills in robot design, programming, and teamwork.
+        These experiences fueled my passion for innovation and problem-solving.
+      </p>
+      <img src="images/46ict.png" alt="46ict" />
+      <p class="caption">
+        <strong>🏅 Bronze Medal, Autonomous Robotics – 46 ICT Academic Expo (National Level, 2023)</strong>
+      </p>
+      <img src="images/MRC.png" alt="MRC" />
+      <p class="caption">
+        <strong>🤖 Maker Robotics Challenge 2023 – Maze Solving (International Open)</strong>
+      </p>
+      <img src="images/PIM.png" alt="PIM" />
+      <p class="caption">
+        <strong>🇹🇭 Thailand Youth Robotics Championship (PIM Robot Playground)</strong> <br>– “The Fast” & Beam Obstacle (Open Circuit)<br>
+      </p>
+      <img src="images/Robot.png" alt="ROBOT" />
+      <p class="caption">
+        <strong>Online Rescue Robotics Training & Competition – Virtual Simulation Scenario</strong>
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <h3>🏅 High School Innovation Project Competition</h3>
+      <p>
+        Participated in a national-level innovation project competition during high school,
+        developing creative solutions to real-world problems with a focus on technology and sustainability.
+      </p>
+      <img src="images/EGET.JPG" alt="Innovation Project" />
+      <p class="caption">
+        🥉 <strong>Second Runner-Up (3rd Place)</strong> - National Level <br>
+        🏆  <a href="https://gls.egat.co.th/activities/139" target="_blank"
+        >Category: Invention – Innovation Competition<br></a>
+        Field: Energy and Environment, 2022<br>
+        Project: "Carbon Dioxide Reduction from Air Conditioners Using Natural Power"<br>
+        or 🐙 "Energy Saving Letter from Cuttlefish Shell"
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <h3>⚽ Sports Achievements</h3>
+      <p>
+        Active participant in football, futsal, and basketball competitions at school level.<br>
+        Developed teamwork, leadership, and physical endurance through regular training and matches.
+      </p>
+      <img src="images/football.png" alt="Sports" />
+      <p class="caption">🏆⚽<strong> CMU Freshmens, 2024</strong></p>
+      <img src="images/Basketball.png" alt="Sports" />
+      <p class="caption"><strong>Basketball player</strong> at high school level, representing Ratchawadee Faculty <br>Sanguan Ying School 🏀<br></p>
+      <img src="images/Headstand.png" alt="Sports" />
+      <p class="caption"><strong>Head Stand</strong></p>
+      <img src="images/stand cheer.png" alt="Sports" />
+      <p class="caption"><strong>Standcheer</strong></p>
+    </div>
+
+    <div class="experience-item">
+      <h3>🗣️ Communication & Confidence</h3>
+      <p>
+        Possess strong communication skills and confidence in public speaking, enabling effective expression of ideas and teamwork.
+      </p>
+      <img src="images/Long distance.png" alt="Commumication" />
+      <p>
+        🎓 Distance Education – U.S. History Course 🇺🇸 <br>  Achieved a perfect score of <strong>100%</strong> on the KPA evaluation 🏅 <br>during November 2022 – January 2023.<br><br />
+        Completed through <strong>Lodi High School</strong> and <strong>Sa-nguan Ying School</strong>, demonstrating dedication and academic excellence 📚✨.<br>
+      </p>
+      <img src="images/Presentation.png" alt="Commumication" />
+      <p>
+        🏅 <strong>Consolation Prize</strong> – Pronunciation & Presentation <br> Awarded in The Student’s Presentation Competition for Grades 7-9 🎤📚<br />
+        Held at Sa-nguan Ying School 🏫<br>
+      </p>
+    </div>
+
+    
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html" target="_blank">🏠 Home</a>
+      <a href="Experience.html" target="_blank">💼 Experience</a>
+      <a href="Contact.html" target="_blank">📬 Contact</a>
+    </nav>
+
+  </section>
+
+</body>
+</html>

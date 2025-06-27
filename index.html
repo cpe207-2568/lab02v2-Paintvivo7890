@@ -2,8 +2,260 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Narudee Sornsawat's personal portfolio and blog — Computer Engineering student at CMU sharing skills, projects, and passions." />
+    <title>My Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Comfortaa', cursive;
+        color: #2e2e4e;
+        background: linear-gradient(-45deg, #e6e6fa, #d6ecff, #f3e7ff, #d9f0ff);
+        background-size: 400% 400%;
+        animation: gradientBG 12s ease infinite;
+      }
+
+      @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      header {
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #7c85d6;
+        font-weight: 500;
+        font-size: 16px;
+        transition: color 0.3s, transform 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #4f5fc1;
+        transform: scale(1.08);
+      }
+
+      main {
+        text-align: center;
+        padding: 30px 20px;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      h1, h2, p, img {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      h1 { animation-delay: 0.2s; }
+      h2 { animation-delay: 0.4s; }
+      img { animation-delay: 0.6s; }
+      p   { animation-delay: 0.8s; }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h1 {
+        color: #b298dc;
+        font-size: 34px;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+
+      h2 {
+        color: #9aabff;
+        font-size: 26px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: 500;
+        transition: transform 0.3s;
+      }
+
+      h2:hover {
+        transform: scale(1.05);
+        color: #bfaee0;
+      }
+
+      img {
+        border-radius: 20px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        margin-bottom: 40px;
+        max-width: 50%;
+        transition: transform 0.4s;
+      }
+
+      img:hover {
+        transform: scale(1.02) rotate(-1deg);
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.7;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+        margin: auto;
+        max-width: 650px;
+      }
+
+      a {
+        word-break: break-word;
+      }
+
+      /* Styles for Skills Section */
+      section#skills {
+        max-width: 650px;
+        margin: 40px auto 60px;
+        background-color: rgba(255, 255, 255, 0.65);
+        padding: 30px 30px 35px;
+        border-radius: 20px;
+        box-shadow: 0 6px 18px rgba(150, 140, 200, 0.15);
+        animation: fadeInUp 1s ease forwards;
+        opacity: 0;
+        transform: translateY(30px);
+        animation-delay: 1s;
+        text-align: left;
+      }
+
+      section#skills h2 {
+        color: #7a78d9;
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 1.3px;
+      }
+
+      .skill-category {
+        margin-bottom: 25px;
+        padding-left: 12px;
+        border-left: 4px solid #9aabff;
+        transition: background-color 0.3s ease;
+        border-radius: 8px;
+      }
+
+      .skill-category:hover {
+        background-color: rgba(154, 171, 255, 0.15);
+      }
+
+      .skill-category h3 {
+        color: #9aabff;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 20px;
+        user-select: none;
+      }
+
+      .skill-category p {
+        font-size: 17px;
+        line-height: 1.6;
+        color: #4a4f78;
+        margin: 0;
+        user-select: text;
+      }
+
+      @media (max-width: 768px) {
+        img {
+          max-width: 60%;
+        }
+        .nav-links {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        section#skills {
+          padding: 20px 15px 25px;
+        }
+        .skill-category h3 {
+          font-size: 18px;
+        }
+        .skill-category p {
+          font-size: 16px;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h2>🌸 Paint's Blog</h2>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html" target="_blank">🏠 Home</a>
+        <a href="Experience.html" target="_blank">💼 Experience</a>
+        <a href="Contact.html" target="_blank">📬 Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>💻 My Profile: Personal Blog 🌼</h1>
+      <h2>Narudee Sornsawat ✨</h2>
+      <img src="Paint.JPG" alt="My Photo" />
+      <p>
+        Hey! I’m Paint 😊 <br />
+        A 2nd-year
+        <a href="https://www.cpe.eng.cmu.ac.th/" target="_blank"
+          >Computer Engineering</a
+        >
+        student at CMU! 💻<br />
+        I love creating cool stuff, solving tricky problems, and sprinkling ✨ &nbsp;
+        joy in every project.<br />
+        Hope you enjoy my portfolio as much as I enjoyed crafting it 💕
+      </p>
+    </main>
+
+    <section id="skills" aria-label="Skills and Talents">
+      <h2>🛠️ Skills & Talents</h2>
+    
+      <div class="skill-category">
+        <h3>💻 Technology & Programming</h3>
+        <p>
+          Have a good foundation in C++, C, HTML, CSS, with hands-on experience in robotics 🤖.  
+          Passionate about crafting efficient and elegant code to solve real-world problems.
+        </p>
+      </div>
+      
+    
+      <div class="skill-category">
+        <h3>⚽ Sports & Fitness</h3>
+        <p>
+          Active player in football, futsal, and basketball 🏀 — teamwork and agility are my strengths!
+        </p>
+      </div>
+    
+      <div class="skill-category">
+        <h3>🎵 Music & Performance</h3>
+        <p>
+          Skilled at playing the ukulele 🎸 and kalimba 🎶, bringing melodies to life with joy and creativity.
+        </p>
+      </div>
+    
+      <div class="skill-category">
+        <h3>🎨 Art, Creativity & Spirituality</h3>
+        <p>
+          Enthusiastic about drawing & painting ✏️, creative writing 📖, and chanting traditional Sapphanya melodies 🕉️ — expressing stories, emotions, and spirituality through art and sound.
+        </p>
+      </div>      
+    </section>
+    
+  </body>
 </html>
+
