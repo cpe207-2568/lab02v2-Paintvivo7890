@@ -24,13 +24,12 @@
       padding: 30px 35px 70px;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(74, 108, 247, 0.2);
-      /* เพิ่ม animation ตอนโหลดเข้าหน้า */
+      
       animation: fadeInUp 1s ease forwards;
       opacity: 0;
       transform: translateY(20px);
     }
 
-    /* กล่องแต่ละ item ขยับเล็กน้อยเมื่อ hover + เงานุ่มๆ */
     .experience-item {
       border-left: 4px solid #4a6cf7;
       padding-left: 20px;
@@ -57,7 +56,7 @@
       line-height: 1.6;
     }
 
-    /* ภาพมี animation ลอยเบาๆ */
+    
     .experience-item img {
       max-width: 50%;
       height: auto;
@@ -71,7 +70,7 @@
       transition: transform 0.3s ease;
     }
 
-    /* ภาพจะขยายเล็กน้อยเวลาหยุด hover */
+    
     .experience-item img:hover {
       transform: scale(1.05);
       box-shadow: 0 6px 16px rgba(74, 108, 247, 0.4);
@@ -85,7 +84,7 @@
       user-select: none;
     }
 
-    /* ✅ Navigation Styling */
+    
     .nav-links {
       display: flex;
       justify-content: center;
@@ -114,7 +113,6 @@
       box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
     }
 
-    /* Keyframes for floating image */
     @keyframes floatImage {
       0%, 100% {
         transform: translateY(0px);
@@ -124,7 +122,7 @@
       }
     }
 
-    /* Keyframes fadeInUp */
+   
     @keyframes fadeInUp {
       to {
         opacity: 1;
